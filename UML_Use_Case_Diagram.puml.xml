@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Corrected UML Use Case Diagram">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- System Boundary -->
+        <mxCell id="boundary" value="Personal Subscription &amp; Recurring Expense Auditor System" style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=14;fillColor=#f8f9fa;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="560" height="580" as="geometry" />
+        </mxCell>
+        
+        <!-- Primary Actor: Individual User -->
+        <mxCell id="actor_user" value="Individual User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="40" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Secondary Actor: Bank Transaction Source -->
+        <mxCell id="actor_bank" value="Bank Transaction&#xa;Source" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="860" y="110" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Secondary Actor: Finance Auditor -->
+        <mxCell id="actor_auditor" value="Finance Auditor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="860" y="480" width="40" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases -->
+        <mxCell id="uc1" value="1. Import Transaction Data" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="90" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc2" value="2. Analyze Recurring&#xa;Transactions" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="580" y="90" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc3" value="3. View Subscription Details" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="230" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc4" value="4. Calculate Monthly&#xa;Subscription Expenditure" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="230" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc5" value="5. Receive Renewal Alert" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc6" value="6. Get Cancellation Guidance" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="580" y="360" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc7" value="7. Review Expense Report" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="430" y="490" width="180" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Solid Actor Associations -->
+        <mxCell id="edge1" style="endArrow=none;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="actor_user" target="uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="endArrow=none;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="actor_user" target="uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="endArrow=none;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="actor_user" target="uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="endArrow=none;html=1;exitX=1;exitY=0.5;" edge="1" parent="1" source="uc2" target="actor_bank">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="endArrow=none;html=1;exitX=1;exitY=0.5;" edge="1" parent="1" source="uc7" target="actor_auditor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Corrected Stereotype Relationships -->
+        <mxCell id="include1" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;dashed=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endFill=0;" edge="1" parent="1" source="uc1" target="uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="include2" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;dashed=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endFill=0;" edge="1" parent="1" source="uc3" target="uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extend1" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;dashed=1;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;endFill=0;" edge="1" parent="1" source="uc6" target="uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
